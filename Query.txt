@@ -1,0 +1,20 @@
+CREATE TABLE vehiculo (
+id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+nombre VARCHAR(50) NOT NULL,
+patente VARCHAR (9) NOT NULL,
+email VARCHAR(50) NOT NULL,
+estacionado TINYINT(1),
+tiempo DATETIME
+)
+
+INSERT INTO vehiculo (nombre, patente, email) VALUES ('User 1', 'aa-098-dc', 'email@example.com');
+
+
+CREATE TABLE precios (
+minuto FLOAT(10),
+hora INT(10),
+dia INT(10),
+mes INT(10)
+)
+
+INSERT INTO precios (minuto, hora, dia, mes) VALUES (0.83, 50, 1200, 36000);
