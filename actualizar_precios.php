@@ -35,7 +35,7 @@
 						<form action="modelo_vehiculo.php" method="POST">
 							<div class="form-group">
 								<label for="minuto">Minuto:</label>
-								<input type="text" name="minuto" id="minuto" class="form-control" value="<?php echo $minuto ?>">
+								<input type="number" step="0.01" name="minuto" id="minuto" class="form-control" value="<?php echo $minuto ?>">
 							</div>
 							<div class="form-group">
 								<label for="minuto">hora:</label>
