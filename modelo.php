@@ -58,15 +58,15 @@
 
 		        $dtd = new stdClass();
 		        $dtd->interval = $t2 - $t1;
-		        $dtd->total_sec = abs($t2-$t1);
-		        $dtd->total_min = floor($dtd->total_sec/60);
-		        $dtd->total_hour = floor($dtd->total_min/60);
-		        $dtd->total_day = floor($dtd->total_hour/24);
+		        $dtd->total_seg = abs($t2-$t1);
+		        $dtd->total_min = floor($dtd->total_seg/60);
+		        $dtd->total_hora = floor($dtd->total_min/60);
+		        $dtd->total_dia = floor($dtd->total_hora/24);
 
-		        $dtd->day = $dtd->total_day;
-		        $dtd->hour = $dtd->total_hour - ($dtd->total_day*24);
-		        $dtd->min = $dtd->total_min - ($dtd->total_hour*60);
-		        $dtd->sec = $dtd->total_sec - ($dtd->total_min*60);
+		        $dtd->dia = $dtd->total_dia;
+		        $dtd->hora = $dtd->total_hora - ($dtd->total_dia*24);
+		        $dtd->min = $dtd->total_min - ($dtd->total_hora*60);
+		        $dtd->seg = $dtd->total_seg - ($dtd->total_min*60);
 
 		        $minutos = $dtd->total_min;
 		        echo $minutos . " minutos";
