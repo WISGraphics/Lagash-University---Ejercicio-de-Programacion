@@ -47,7 +47,7 @@
 		//PROPIEDAD MINUTOS-ESTACIONADO 
 		public function MinutosEstacionado($conn){
 			try {
-				$sql = "SELECT patente, tiempo FROM vehiculo WHERE `estacionado` = 1 AND `patente` = 'aa-098-dc'";
+				$sql = "SELECT patente, tiempo FROM vehiculo WHERE `estacionado` = 1 AND `patente` = 'aa-123-bc'";
 				$resultado = $conn->query($sql);
 				$respuesta = $resultado->fetch_assoc();
 
@@ -133,7 +133,7 @@
 
 		// OBTENER EMAIL POR PATENTE
 		public static function ObtenerEmailPorPatente($patente_email, $conn){
-			$sql = "SELECT email FROM `vehiculo` WHERE patente = 'aa-098-dc'";
+			$sql = "SELECT email FROM `vehiculo` WHERE patente = 'aa-123-bc'";
 			$resultado = $conn->query($sql);
 			$respuesta = $resultado->fetch_assoc();
 

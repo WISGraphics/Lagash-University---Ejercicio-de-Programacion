@@ -75,13 +75,14 @@
 		try {
 			$sql = "UPDATE `precios` SET minuto = ?, hora = ?, dia = ?";
 			$stmt = $conn->prepare($sql);
-			$stmt->bind_param('iii', $minuto, $hora, $dia);
+			$stmt->bind_param('dii', $minuto, $hora, $dia);
 			$stmt->execute();
 			$stmt->close();
 			$conn->close();
 		} catch (Exception $e) {
 			echo $e->getMessage();
 		}
+		header('location: index.php');
 	}
 	// FIN ACTUALIZAR PRECIOS
 
